@@ -1,0 +1,10 @@
+<div style= "text-align:center;line-height:100%;padding:10px;">
+    <h2>ConnectAPIの認証結果</h2>
+    <p><%= @state  %></p>
+    <p><%= @error  %></p>
+
+    <!--ここで、アクセスユーザー取得のためのボタンを表示-->
+    <%= form_tag callapi_getacs_path do %>
+      <input type="submit" value="GET ACCESSGUEST" class="btn primary-btn">
+    <%end%>
+</div>

@@ -1,0 +1,33 @@
+<div style= "text-align:center;line-height:100%;padding:10px;">
+    <!--<h2>アクセスゲスト一覧</h2>
+    
+    <p>現在の時刻</p>
+    <p><#%= @time  %></p>-->
+    
+    <!--
+    <p>ゲスト一覧</p>
+    <#% @guests.each do |guest| %>
+        <font color="red">
+          <#%= "名前：　" + guest["attributes"]["name"] %><br>
+          <#%= "開始時刻：　" + guest["attributes"]["starts_at"] %><br>
+          <#%= "終了時刻：　" + guest["attributes"]["ends_at"] %><br>
+        </font>
+        
+        <#% start = DateTime.parse(guest["attributes"]["starts_at"]) %>
+        <p>差分</p>
+        <#%= (start - @time)/60 %><br>
+        
+        <#% if @status == "認証に成功しました" %>
+          <p>続けてConnectAPIの認証を行ってください。</p>
+          <a href = <#%= APP_CONFIG["webhost"] + "connecthookup/setup"%> >ConnectAPI認証ページ</a>
+        <#% end %>
+    <#% end %>
+    -->
+    <h3>ConnectAPIの認証結果</h3>
+    <p><%= @state %></p>
+    
+    <h3>認証画面に戻る</h3>
+    <%= form_tag aouthsetup_setup_path do %>
+      <input type="submit" value="認証画面に戻る" class="btn primary-btn">
+    <%end%>
+
