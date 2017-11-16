@@ -10,6 +10,7 @@ CTX.verify_mode = OpenSSL::SSL::VERIFY_NONE
     aouthctr = AouthsetupController.new
     accessToken = aouthctr.getAccessToken
     authtoken = "Bearer " + accessToken
+    #aaa
     
     #ACS情報の取得
     res = HTTP.headers("Content-Type" => "application/json", :Authorization => authtoken)
