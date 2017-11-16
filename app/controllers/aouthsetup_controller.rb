@@ -15,14 +15,14 @@ CTX.verify_mode = OpenSSL::SSL::VERIFY_NONE
     #Veiwから値を受取る
     @@key = 	params[:email].presence
     @@client =	params[:clientId].presence
-    #@@client = 'b64e0af10b89dfb7ed58310cae5598e8d913a274642ff8ec56e3a9791a39eb87'
+    #@@client = '8a5067ade8b1d54f3474de2e2d6f3e4e9d75679580931a4e92d3efd3d7e72bcc'
     @@secret =	params[:clientSecret].presence
-    #@@secret = 'dfc26c554e7d988abcde977de7892b6005dee2ecd18b984b7c703ddd233edb15'
-    @@callbackuri = 'https://sample-yumikotsunai.c9users.io/aouthsetup/callback'
+    #@@secret = '33899894d9342a954f9df8b73e0cef2e5a65b3aa8fc57df62c47445194262ba6'
+    @@callbackuri = 'https://lockstate-api-test-kke1573.c9users.io/aouthsetup/callback'
     
     #connectのoauth認証のためのURLにアクセスする  (A)リソースオーナーにAuthorization Request送信
     req = 'https://connect.lockstate.jp/oauth/'+'authorize?'+'client_id='+@@client+'&response_type=code&redirect_uri='+@@callbackuri
-    #req = 'https://connect.lockstate.jp/oauth/authorize?client_id=cef946186caabbc4d8b691b6baa7b6e774bfbfe2cafa8f85709aa51cd89be0a1&response_type=code&redirect_uri=urn:ietf:wg:oauth:2.0:oob'
+    #req = 'https://connect.lockstate.jp/oauth/authorize?client_id=8a5067ade8b1d54f3474de2e2d6f3e4e9d75679580931a4e92d3efd3d7e72bcc0a1&response_type=code&redirect_uri=urn:ietf:wg:oauth:2.0:oob'
     redirect_to req
     
   end
